@@ -21,7 +21,9 @@ export default class Component3 extends Component {
   }
 
   onSwitchChange(value){
-    this.setState({switchValue: value});
+    this.setState({
+      switchValue: value
+    });
   }
 
   render() {
