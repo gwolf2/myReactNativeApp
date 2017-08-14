@@ -1,7 +1,15 @@
 import React, { Component } from 'react';
-import {AppRegistry, StyleSheet, Text, View} from 'react-native';
+import {AppRegistry, StyleSheet, Text, View, TouchableHighlight, TouchableOpacity} from 'react-native';
 
 export default class Component2 extends Component {
+  onPress() {
+    console.log('Area Pressed')
+  }
+
+  onPress2() {
+    console.log('Area 2 Pressed')
+  }
+
   render() {
     return (
       <View style={styles.outer}>
@@ -9,12 +17,23 @@ export default class Component2 extends Component {
           <Text style={styles.myText}>Hello Gavin</Text>
         </View>
         <View style={styles.container}>
-          <View style={styles.v1}>
-            <Text style={styles.vText}>View 1</Text>
-          </View>
-          <View style={styles.v2}>
-            <Text style={styles.vText}>View 2</Text>
-          </View>
+          <TouchableHighlight
+            style={styles.v1}
+            onPress={this.onPress}
+            underlayColor="blue"
+            >
+            <View>
+              <Text style={styles.vText}>View 1</Text>
+            </View>
+          </TouchableHighlight>
+          <TouchableOpacity
+            onPress={this.onPress2}
+            style={styles.v2}
+            >
+            <View>
+              <Text style={styles.vText}>View 2</Text>
+            </View>
+          </TouchableOpacity>
           <View style={styles.v3}>
             <Text style={styles.vText}>View 3</Text>
           </View>
