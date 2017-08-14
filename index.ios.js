@@ -1,14 +1,14 @@
 import React, { Component } from 'react';
 import {AppRegistry, StyleSheet, Text, View} from 'react-native';
 
-import Component1 from './app/components/Component1/Component1';
+import Component2 from './app/components/Component2/Component2';
 
 export default class myReactNativeApp extends Component {
   render() {
     return (
       <View style={styles.container}>
         <Text>
-          <Component1 />
+          <Component2 />
         </Text>
       </View>
     );

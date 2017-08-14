@@ -7,10 +7,25 @@ import {
 } from 'react-native';
 
 export default class Component1 extends Component {
+  constructor(props){
+    super();
+    this.state = {
+      name: 'Gavin',
+      showName: true,
+      message: props.message
+    }
+  }
+
+  static defaultProps = {
+    message: 'Hi There'
+  }
+
   render() {
+    let name = this.state.showName ? this.state.name : '';
     return (
       <View style={styles.container}>
-        <Text>This is Component 1</Text>
+        <Text>{this.state.message}</Text>
+        <Text>{name}</Text>
       </View>
     );
   }
