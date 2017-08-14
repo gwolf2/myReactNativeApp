@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
-import {AppRegistry, StyleSheet, Text, View, Navigator} from 'react-native';
+import {AppRegistry, StyleSheet} from 'react-native';
+import {Navigator} from 'react-native-deprecated-custom-components';
 
 import Component5 from './app/components/Component5/Component5';
 import Component6 from './app/components/Component6/Component6';

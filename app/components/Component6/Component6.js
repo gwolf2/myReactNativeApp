@@ -18,13 +18,18 @@ export default class Component6 extends Component {
 
   render() {
     return (
-      <View style={styles.container}>
-        <Text style={styles.row}>{this.state.name}</Text>
-        <Text style={styles.row}>{this.state.email}</Text>
-        <Button
-          onPress={this.onPress.bind(this)}
-          title="Go Back"
-        />
+      <View>
+        <View style={styles.container}>
+          <Text style={styles.row}>{this.state.name}</Text>
+          <Text style={styles.row}>{this.state.email}</Text>
+        </View>
+        <View>
+          <Button
+            onPress={this.onPress.bind(this)}
+            title="Go Back"
+            color="#841584"
+          />
+        </View>
       </View>
     );
   }
@@ -32,8 +37,7 @@ export default class Component6 extends Component {
 
 const styles = StyleSheet.create({
   container: {
-    width: 1000,
-    height: 800
+    paddingTop: 30
   },
   row: {
     flexDirection: 'row',
@@ -41,6 +45,8 @@ const styles = StyleSheet.create({
     padding: 10,
     backgroundColor: '#f4f4f4',
     marginBottom: 3
+  },
+  btnStyle: {
   }
 });
 

@@ -37,9 +37,8 @@ export default class Component5 extends Component {
       user: user
     });
   }
-}
 
-  renderRow(user, sectionId, rowId, highlightRow) {
+  renderRow(user) {
     return (
       <TouchableHighlight onPress={() => {this.onPress(user)}}>
         <View style={styles.row}>
@@ -62,6 +61,7 @@ export default class Component5 extends Component {
 
 const styles = StyleSheet.create({
   container: {
+    paddingTop: 30,
     width: 1000,
     height: 800
   },
